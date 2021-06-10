@@ -1,3 +1,5 @@
+// Copyright (c) 2021 Ivan Zadvornov
+
 import './Skills.css'
 
 const skills = [

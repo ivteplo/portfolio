@@ -1,3 +1,5 @@
+// Copyright (c) 2021 Ivan Zadvornov
+
 import Header from './Header'
 import Projects from './Projects'
 import Skills from './Skills'

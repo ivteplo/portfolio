@@ -1,3 +1,5 @@
+// Copyright (c) 2021 Ivan Zadvornov
+
 import './Header.css'
 
 export default function Header() {

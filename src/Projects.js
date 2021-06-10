@@ -1,3 +1,5 @@
+// Copyright (c) 2021 Ivan Zadvornov
+
 import './Projects.css'
 import { faHtml5, faCss3, faJsSquare, faReact, faBootstrap, faPython } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
