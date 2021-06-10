@@ -1,0 +1,12 @@
+.SkillList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--padding) / 2);
+  margin-top: var(--padding);
+}
+
+.SkillView {
+  padding: var(--padding);
+  border-radius: var(--border-radius);
+  background: var(--background-changed);
+}

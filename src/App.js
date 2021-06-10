@@ -1,9 +1,13 @@
-import './App.css'
+import Header from './Header'
+import Projects from './Projects'
+import Skills from './Skills'
 
 function App() {
   return (
     <div className="App">
-      Hello world!
+      <Header />
+      <Skills />
+      <Projects />
     </div>
   )
 }
