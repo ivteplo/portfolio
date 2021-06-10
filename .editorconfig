@@ -11,5 +11,5 @@ charset = utf-8
 trim_trailing_whitespace = trye
 insert_final_newline = trye
 
-[{*.js,*.json,*.pug,*.scss}]
+[{*.js,*.json,*.css}]
 indent_size = 2
