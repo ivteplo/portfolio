@@ -81,7 +81,7 @@ function ProjectView({ project, ...props }) {
 
   return (
     <div className={"ProjectView " + (isWide ? 'wide' : '')} ref={ref} {...props}>
-      <img src={project.image} alt="Project screenshot" className="ProjectImage" />
+      <img src={process.env.PUBLIC_URL + '/' + project.image} alt="Project screenshot" className="ProjectImage" />
       <div className="ProjectInfo">
         <h3 className="ProjectTitle">{project.title}</h3>
         <p className="ProjectDescription">{project.description}</p>
