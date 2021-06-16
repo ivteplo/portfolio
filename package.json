@@ -42,6 +42,7 @@
   },
   "main": "src/index.js",
   "repository": "https://github.com/ivteplo/portfolio",
+  "homepage": "https://ivteplo.github.io/portfolio",
   "author": "Ivan Zadvornov <iteplov7@gmail.com>",
   "license": "Apache-2.0"
 }
