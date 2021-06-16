@@ -1,10 +1,16 @@
 /* Copyright (c) 2021 Ivan Zadvornov */
 
 header h1 {
-  font-size: 4rem;
   font-weight: 500;
 }
 
 header h1 + p {
-  margin-top: calc(var(--padding) / 4);
+  margin: calc(var(--padding) / 4) 0 calc(var(--padding) * 2);
+  font-size: 1.7rem;
+  letter-spacing: 0.1ch;
 }
+
+header .button-primary {
+  font-size: 1.5rem;
+}
+

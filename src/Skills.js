@@ -2,35 +2,46 @@
 
 import './Skills.css'
 
-const skills = [
-  'HTML5',
-  'CSS3',
-  'Pug',
-  'Sass',
-  'JavaScript',
-  'TypeScript',
-  'CoffeeScript',
-  'React',
-  'Node.js',
-  'Webpack',
-  'Rollup',
-  'Gulp',
-  'Python',
-  'Flask',
-  'Ruby',
-  'C#',
-  'Java',
-  'C/C++',
-  'PHP',
-  'Linux',
-  'Terminal',
-  'MySQL',
-  'SQLite',
-  'Firebase',
-  'Git',
-  'GitHub',
-  'Heroku',
-]
+const skillGroups = {
+  'Markup Languages': [
+    'HTML5',
+    'CSS3',
+    'Sass',
+    'Pug',
+  ],
+  'Programming Languages': [
+    'JavaScript',
+    'TypeScript',
+    'CoffeeScript',
+    'Python',
+    'Ruby',
+    'C#',
+    'Java',
+    'C/C++',
+  ],
+  'Frameworks': [
+    'React',
+    'Flask',
+  ],
+  'JavaScript Tools': [
+    'Webpack',
+    'Rollup',
+    'Gulp',
+    'ESLint',
+    'Prettier',
+  ],
+  'Programming Tools': [
+    'Git',
+    'Linux Terminal',
+  ],
+  'Cloud Providers and Databases': [
+    'Heroku',
+    'Firebase',
+    'MySQL',
+    'SQLite',
+    'PostgreSQL',
+  ]
+}
 
 function SkillView({ skill }) {
   return (
@@ -40,13 +51,30 @@ function SkillView({ skill }) {
   )
 }
 
-export default function Skills() {
+function SkillGroup({ groupName, skills }) {
   return (
-    <section>
-      <h2>Skills</h2>
+    <div className="SkillGroup">
+      <h3>{groupName}</h3>
       <div className="SkillList">
         {skills.map(skill => (
-          <SkillView skill={skill} key={skill} />
+          <SkillView key={skill} skill={skill} />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+export default function Skills() {
+  return (
+    <section id="skills">
+      <h2>Skills</h2>
+      <div className="SkillGroupList">
+        {Object.keys(skillGroups).map(groupName => (
+          <SkillGroup
+            skills={skillGroups[groupName]}
+            groupName={groupName}
+            key={groupName}
+          />
         ))}
       </div>
     </section>

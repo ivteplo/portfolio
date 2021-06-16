@@ -69,11 +69,14 @@ function ProjectView({ project, ...props }) {
   const [isWide, setIsWide] = useState(false)
   const ref = useRef()
 
+  const checkSize = () => {
+    const width = ref.current?.clientWidth ?? 0
+    setIsWide(width > 600)
+  }
+
   useEffect(() => {
-    window.addEventListener('resize', () => {
-      const width = ref.current.clientWidth
-      setIsWide(width > 600)
-    })
+    checkSize()
+    window.addEventListener('resize', () => checkSize())
   }, [])
 
   return (
@@ -98,12 +101,12 @@ function ProjectView({ project, ...props }) {
 
 export default function Projects() {
   return (
-    <section>
+    <section id="projects">
       <h2>Projects</h2>
       <div className="ProjectList">
-        {projects.map(project => (
-          <ProjectView project={project} key={project.name} />
-        ))}
+        {projects.map(project => {
+          return <ProjectView project={project} key={project.title} />
+        })}
       </div>
     </section>
   )

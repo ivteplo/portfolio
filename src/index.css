@@ -3,11 +3,24 @@
 :root {
   --background: #000;
   --background-changed: #121212;
+
   --foreground: #fff;
+
   --primary: rgb(56, 68, 240);
   --primary-changed: rgb(48, 59, 214);
+  /* Color used as foreground when primary is background,
+     or background when primary is foreground */
+  --primary-pair: white;
+
+  --secondary: purple;
+
+  --navigation-link: #ccc;
+  --navigation-link-changed: #fff;
+
   --padding: 1rem;
   --border-radius: 10px;
+  --blur-radius: 0.5rem;
+  --transition-duration: 0.3s;
 }
 
 html,
@@ -39,16 +52,42 @@ code {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 5rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 374px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+
+  :root {
+    --padding: 0.75rem;
+  }
+}
+
 
 h1 + p,
 h2 + p,
@@ -79,3 +118,30 @@ section {
   align-items: flex-start;
   justify-content: center;
 }
+
+.button {
+  text-decoration: none;
+  padding: calc(var(--padding) / 2) var(--padding);
+
+  color: currentColor;
+
+  font-size: 1rem;
+  font-family: inherit;
+
+  border: none;
+  outline: none;
+
+  border-radius: var(--border-radius);
+  transition: color var(--transition-duration),
+    background-color var(--transition-duration);
+}
+
+.button-primary {
+  background: var(--primary);
+  color: var(--primary-pair);
+}
+
+.button-primary:hover {
+  background: var(--primary-changed);
+}
+

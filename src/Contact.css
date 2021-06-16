@@ -1,0 +1,26 @@
+/* Copyright (c) 2021 Ivan Zadvornov */
+
+#contact h2 {
+  margin-bottom: var(--padding);
+}
+
+.ContactList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ContactList > a {
+  margin: var(--padding);
+  margin-left: 0;
+  margin-top: 0;
+
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.ContactList > a > svg {
+  margin-right: var(--padding);
+}
+
+
