@@ -1,0 +1,47 @@
+/* Copyright (c) 2021-2022 Ivan Teplov */
+
+@use "theme";
+@use "utils";
+
+nav {
+  @extend .row;
+  align-items: center;
+
+  padding: var(--padding);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 3;
+
+  @media (max-width: 374px) {
+    display: none;
+  }
+
+  @supports (backdrop-filter: blur(0px)) {
+    --background-opacity: 0.85;
+    backdrop-filter: blur(var(--blur-radius));
+  }
+
+  h2 {
+    font-size: 1em;
+    font-weight: normal;
+    flex-grow: 1;
+  }
+
+  a {
+    margin-left: calc(var(--padding) * 2);
+
+    &:not(.button-primary) {
+      @extend .text-foreground, .text-75;
+      text-decoration: none;
+      transition: var(--transition-duration) color;
+
+      &:hover {
+        @extend .text-100;
+      }
+    }
+  }
+}

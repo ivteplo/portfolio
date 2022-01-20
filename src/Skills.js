@@ -1,6 +1,6 @@
-// Copyright (c) 2021 Ivan Zadvornov
+// Copyright (c) 2021-2022 Ivan Teplov
 
-import './Skills.css'
+import './Skills.scss'
 
 const skillGroups = {
   'Markup Languages': [

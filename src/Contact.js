@@ -1,6 +1,6 @@
-// Copyright (c) 2021 Ivan Zadvornov
+// Copyright (c) 2021-2022 Ivan Teplov
 
-import './Contact.css'
+import './Contact.scss'
 import { faGithub, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -13,7 +13,7 @@ export default function Contact() {
           href="https://github.com/ivteplo"
           target="_blank"
           rel="noreferrer"
-          className="button button-primary"
+          className="button-primary"
         >
           <FontAwesomeIcon icon={faGithub} />
           Github
@@ -22,7 +22,7 @@ export default function Contact() {
           href="https://twitter.com/ivteplo"
           target="_blank"
           rel="noreferrer"
-          className="button button-primary"
+          className="button-primary"
         >
           <FontAwesomeIcon icon={faTwitter} />
           Twitter
@@ -31,7 +31,7 @@ export default function Contact() {
           href="https://instagram.com/iteplov7"
           target="_blank"
           rel="noreferrer"
-          className="button button-primary"
+          className="button-primary"
         >
           <FontAwesomeIcon icon={faInstagram} />
           Instagram

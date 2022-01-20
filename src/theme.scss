@@ -1,0 +1,87 @@
+/* Copyright (c) 2021-2022 Ivan Teplov */
+
+@use "sass:color";
+@use "sass:map";
+
+$light-theme: (
+  "background": rgb(255, 255, 255),
+  "foreground": rgb(0, 0, 0),
+  "primary": rgb(11, 81, 245),
+);
+
+$dark-theme: (
+  "background": rgb(0, 0, 0),
+  "foreground": rgb(255, 255, 255),
+  "primary": rgb(11, 81, 245),
+);
+
+:root {
+  --text-opacity: 1;
+  --background-opacity: 1;
+
+  --system-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+
+  --mono-font: SF Mono, Cascadia Code, source-code-pro, Menlo, Monaco, Consolas,
+    "Courier New", monospace;
+
+  --padding: 1rem;
+  --border-radius: 0.625rem;
+  --blur-radius: 2rem;
+  --transition-duration: 0.3s;
+
+  @for $step from 0 through 4 {
+    .text-#{25 * $step} {
+      --text-opacity: #{0.25 * $step};
+    }
+
+    .background-#{25 * $step} {
+      --background-opacity: #{0.25 * $step};
+    }
+  }
+
+  @each $key, $value in $light-theme {
+    --#{$key}: #{color.red($value)}, #{color.green($value)},
+      #{color.blue($value)};
+
+    .text-#{$key} {
+      color: rgba(var(--#{$key}), var(--text-opacity));
+    }
+
+    .background-#{$key} {
+      background-color: rgba(var(--#{$key}), var(--background-opacity));
+    }
+
+    @media (prefers-color-scheme: dark) {
+      --#{$key}: map.get($dark-theme, $key);
+    }
+  }
+}
+
+.button {
+  text-decoration: none;
+  padding: calc(var(--padding) / 2) var(--padding);
+
+  color: currentColor;
+
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: medium;
+
+  border: none;
+  outline: none;
+
+  border-radius: var(--border-radius);
+  transition: filter var(--transition-duration);
+
+  text-align: center;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
+
+.button-primary {
+  @extend .button, .text-background, .background-primary;
+}

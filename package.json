@@ -9,6 +9,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "sass": "^1.49.0",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -43,6 +44,6 @@
   "main": "src/index.js",
   "repository": "https://github.com/ivteplo/portfolio",
   "homepage": "https://ivteplo.github.io/portfolio",
-  "author": "Ivan Zadvornov <iteplov7@gmail.com>",
+  "author": "Ivan Teplov <iteplov7@gmail.com>",
   "license": "Apache-2.0"
 }

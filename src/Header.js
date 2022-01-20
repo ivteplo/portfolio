@@ -1,13 +1,13 @@
-// Copyright (c) 2021 Ivan Zadvornov
+// Copyright (c) 2021-2022 Ivan Teplov
 
-import './Header.css'
+import './Header.scss'
 
 export default function Header() {
   return (
     <header>
       <h1>Ivan Teplov</h1>
-      <p>Software Engineer</p>
-      <a href="#contact" className="button button-primary">Contact me</a>
+      <p>Full-Stack Web Developer</p>
+      <a href="#contact" className="button-primary">Contact me</a>
     </header>
   )
 }

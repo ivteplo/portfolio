@@ -1,0 +1,83 @@
+/* Copyright (c) 2021-2022 Ivan Teplov */
+
+@use "theme";
+@use "utils";
+
+.ProjectList {
+  @extend .row;
+  flex-wrap: wrap;
+
+  margin-top: var(--padding);
+  gap: var(--padding);
+
+  .ProjectView {
+    @extend .column;
+
+    min-width: 280px;
+    flex-basis: 280px;
+    flex-grow: 1;
+
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    border: 0.25rem solid var(--primary);
+    box-sizing: border-box;
+
+    .ProjectImage {
+      border-radius: var(--border-radius);
+      width: 100%;
+      margin-bottom: var(--padding);
+      height: 200px;
+      object-fit: contain;
+    }
+
+    &.wide {
+      @extend .row;
+
+      gap: var(--padding);
+
+      .ProjectImage {
+        object-fit: contain;
+        width: 50%;
+        flex-shrink: 0;
+        height: auto;
+      }
+    }
+
+    .ProjectInfo {
+      @extend .column;
+
+      flex-grow: 1;
+      justify-content: flex-end;
+    }
+
+    .ProjectDescription {
+      margin-top: var(--padding);
+      margin-bottom: var(--padding);
+    }
+
+    .ProjectBadges {
+      @extend .row;
+      flex-wrap: wrap;
+
+      font-size: 1.4rem;
+      gap: var(--padding);
+    }
+
+    .ProjectLinks {
+      @extend .column;
+
+      flex-grow: 1;
+      justify-content: flex-end;
+    }
+
+    .ProjectLink {
+      @extend .button, .button-primary;
+
+      margin-top: var(--padding);
+
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+}

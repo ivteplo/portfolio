@@ -1,6 +1,6 @@
-// Copyright (c) 2021 Ivan Zadvornov
+// Copyright (c) 2021-2022 Ivan Teplov
 
-import './Introduction.css'
+import './Introduction.scss'
 
 export default function Introduction() {
   return (

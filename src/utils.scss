@@ -1,0 +1,14 @@
+/* Copyright (c) 2022 Ivan Teplov */
+
+.row,
+.column {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}

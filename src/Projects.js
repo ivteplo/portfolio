@@ -1,6 +1,6 @@
-// Copyright (c) 2021 Ivan Zadvornov
+// Copyright (c) 2021-2022 Ivan Teplov
 
-import './Projects.css'
+import './Projects.scss'
 import { faHtml5, faCss3, faJsSquare, faReact, faBootstrap, faPython } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useRef, useState } from 'react'

@@ -1,4 +1,4 @@
-// Copyright (c) 2021 Ivan Zadvornov
+// Copyright (c) 2021-2022 Ivan Teplov
 
 import NavigationBar from './NavigationBar'
 import Header from './Header'
